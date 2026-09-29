@@ -65,8 +65,17 @@ p { margin: 0 0 14px; }
 .waitlist .done { font-weight: 700; margin: 8px 0 0; }
 .waitlist .err { color: #c62828; font-size: 14px; margin: 8px 0 0; }
 
-.phone { display: block; width: min(300px, 78%); height: auto; margin: 10px auto 0; border-radius: 34px; box-shadow: 0 24px 50px rgba(0,0,0,0.18); background: #000; }
-.phone.small { width: min(230px, 62%); }
+/* A drawn phone around each screenshot: black bezel, thin edge highlight, the
+   screenshot's own status bar and island inside it */
+.device {
+  display: block; width: min(300px, 78%); margin: 10px auto 0; padding: 11px;
+  background: #0b0b0b; border-radius: 46px;
+  box-shadow: 0 0 0 1.5px #3a3a3a, 0 0 0 3px #161616, 0 28px 56px rgba(0,0,0,0.28);
+}
+.device img { display: block; width: 100%; height: auto; border-radius: 36px; background: #000; }
+.device.small { width: min(230px, 62%); }
+.device.will-rise { opacity: 0; transform: translateY(28px) scale(0.985); transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.device.risen { opacity: 1; transform: none; }
 
 section { padding: 38px 0; border-top: 1px solid var(--rule); }
 
@@ -125,8 +134,8 @@ footer .made { margin-top: 8px; }
   .split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
   .split.flip { grid-template-columns: 0.85fr 1.15fr; }
   .split.flip .text { order: 2; }
-  .split.flip .phone { order: 1; }
-  .split .phone, .split .phone.small { margin: 0 auto; width: min(280px, 100%); }
+  .split.flip .device { order: 1; }
+  .split .device, .split .device.small { margin: 0 auto; width: min(280px, 100%); }
   .hero.split { text-align: left; }
   .hero.split .lead { margin-left: 0; }
   .hero.split .stores { justify-content: flex-start; }

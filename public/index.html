@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Booked: a reader for actors who have no one to run lines with</title>
-  <meta name="description" content="Booked is an iPhone app for actors. A reader that runs your sides with you, comes in on your cue, and tapes the self-tape. Learn lines faster, put yourself on tape without a reader, get booked more." />
+  <title>Booked: the app to learn lines, rehearse and self-tape</title>
+  <meta name="description" content="Booked is the app to learn lines: a reader that runs your sides with you, comes in on your cue, feeds you the next line when you blank, and records the self-tape. Made for actors by a working actor." />
   <link rel="icon" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="canonical" href="https://bookedactors.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Booked: no more asking friends to read" />
+  <meta property="og:title" content="Booked: the app to learn lines, rehearse and self-tape" />
   <meta property="og:description" content="A reader that runs your sides with you, comes in on your cue, and tapes the take. Made for actors by a working actor." />
   <meta property="og:site_name" content="Booked" />
   <meta property="og:url" content="https://bookedactors.com/" />
@@ -75,31 +75,31 @@
       </span>
     </div>
     </div>
-    <img class="phone" src="shot-rehearse.jpg" alt="Booked's Rehearse screen: your line bright, the reader's lines dimmed, ready to play" />
+    <div class="device"><img src="shot-rehearse.jpg" alt="Booked's Rehearse screen: your line bright, the reader's lines dimmed, ready to play" /></div>
   </section>
 </div>
 
 <section class="band">
   <div class="wrap split flip">
     <div class="text"><h2>Learn lines <span class="mark">faster.</span></h2>
-    <p class="lead">Import the sides. The reader runs them with you, out loud, as many times as it takes.</p></div>
-    <img class="phone" src="shot-script.jpg" alt="A script in Booked with Rehearse and Record buttons" />
+    <p class="lead">Import the sides directly from email.</p></div>
+    <div class="device"><img src="shot-script.jpg" alt="A script in Booked with Rehearse and Record buttons" /></div>
   </div>
 </section>
 
 <section class="band black">
   <div class="wrap split">
     <div class="text"><h2>Drawing a blank? Say <span class="mark">&ldquo;line.&rdquo;</span></h2>
-    <p class="lead">It feeds you the next few words and keeps going. Nobody has to know.</p></div>
-    <img class="phone small" src="shot-rehearse.jpg" alt="The Rehearse screen with the line pill at the top" />
+    <p class="lead">The reader feeds you your next line.</p></div>
+    <div class="device small"><img src="shot-rehearse.jpg" alt="The Rehearse screen with the line pill at the top" /></div>
   </div>
 </section>
 
 <section class="band yellow">
   <div class="wrap split flip">
     <div class="text"><h2>Put yourself <span class="mark white">on tape.</span></h2>
-    <p class="lead">Same scene, same reader, camera on. Takes save to your Photos.</p></div>
-    <img class="phone" src="shot-record.jpg" alt="Booked's Record screen: the scene over the camera, a red record button" />
+    <p class="lead">Record self-tapes solo.</p></div>
+    <div class="device"><img src="shot-record.jpg" alt="Booked's Record screen: the scene over the camera, a red record button" /></div>
   </div>
 </section>
 
@@ -107,7 +107,7 @@
   <div class="wrap split">
     <div class="text"><h2>No more struggling to find a reader <span class="mark">last minute.</span></h2>
     <p class="lead">Sides at 11 p.m., tape in by morning. No favours owed.</p></div>
-    <img class="phone" src="shot-home.jpg" alt="Booked's home screen: Import PDF, your scripts, your auditions" />
+    <div class="device"><img src="shot-home.jpg" alt="Booked's home screen: Import PDF, your scripts, your auditions" /></div>
   </div>
 </section>
 
@@ -115,7 +115,7 @@
   <div class="wrap split flip">
     <div class="text"><h2>Track every <span class="mark white">audition.</span></h2>
     <p class="lead">Log it in seconds. See your year, your yes rate, who calls you in.</p></div>
-    <img class="phone" src="shot-auditions.jpg" alt="The audition log: projects by month with outcomes" />
+    <div class="device"><img src="shot-auditions.jpg" alt="The audition log: projects by month with outcomes" /></div>
   </div>
 </section>
 
@@ -123,7 +123,7 @@
   <div class="wrap split">
     <div class="text"><h2>Become <span class="mark">THAT</span> actor.</h2>
     <p class="lead">The one who is always ready. And at the end of the year, the numbers to prove it.</p></div>
-    <img class="phone" src="shot-wrapped.jpg" alt="Your year of auditions, wrapped: auditions, yeses, bookings" />
+    <div class="device"><img src="shot-wrapped-end.jpg" alt="Your year of auditions, wrapped: auditions, yeses, bookings" /></div>
   </div>
 </section>
 
@@ -162,5 +162,19 @@
     <div class="made">&copy; 2026 Booked</div>
   </footer>
 </div>
+<script>
+  // Phones rise into place as they scroll into view; skipped when the
+  // person has asked for reduced motion.
+  (function () {
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var devices = document.querySelectorAll(".device");
+    devices.forEach(function (d) { d.classList.add("will-rise"); });
+    if (!("IntersectionObserver" in window)) { devices.forEach(function (d) { d.classList.add("risen"); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("risen"); io.unobserve(e.target); } });
+    }, { threshold: 0.25 });
+    devices.forEach(function (d) { io.observe(d); });
+  })();
+</script>
 </body>
 </html>
