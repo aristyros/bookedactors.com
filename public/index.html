@@ -40,15 +40,6 @@
     </div>
     <p class="stores-note">iPhone first. Android after.</p>
 
-    <div class="waitlist" id="waitlist">
-      <form id="waitlist-form" novalidate>
-        <input type="email" name="email" id="waitlist-email" placeholder="you@email.com" autocomplete="email" inputmode="email" required aria-label="Email" />
-        <button type="submit" id="waitlist-button">Tell me when it's out</button>
-      </form>
-      <p class="why">One email on launch day. Nothing else.</p>
-      <p class="done" id="waitlist-done" hidden>You're on the list. Break a leg.</p>
-      <p class="err" id="waitlist-err" hidden>That didn't go through. Try again, or email aris@bookedactors.com.</p>
-    </div>
 
     <img class="phone" src="shot-rehearse.jpg" alt="The Rehearse screen: your line bright, the reader's lines dimmed, ready to play" />
   </section>
@@ -103,15 +94,10 @@
     <details><summary>Does it work with my sides as they come?</summary><p>Yes. PDFs from casting or your agent, including scans with your start and end marks. A sharp scan works; a blurry photo of a page may not.</p></details>
     <details><summary>Is it free?</summary><p>Tracking your auditions is free, and so is the demo scene. Building a reader for your own sides costs real money per script, so that part is paid, and it is priced well under hiring a reader.</p></details>
     <details><summary>Does it learn from my scripts or my tapes?</summary><p>No. Your scripts, rehearsals and self-tapes are not used to train AI, by us or by the services behind the reader. Takes never leave your phone.</p></details>
-    <details><summary>Android?</summary><p>After iPhone. Leave your email above and you'll hear the day it lands.</p></details>
+    <details><summary>Android?</summary><p>After iPhone.</p></details>
     <details><summary>Can I talk to a person?</summary><p>You can talk to me. <a href="mailto:aris@bookedactors.com?subject=Booked">aris@bookedactors.com</a>, or Message Aris from inside the app.</p></details>
   </section>
 
-  <section class="cta">
-    <h2>Be first to know</h2>
-    <p class="lead">One email on launch day.</p>
-    <p><a class="store" href="#waitlist"><span><b>Tell me when it's out</b></span></a></p>
-  </section>
 
   <footer>
     <div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>
@@ -119,34 +105,5 @@
   </footer>
 </div>
 
-<script>
-  // The waitlist: one row per email into the app's own database. The key
-  // below is the public one the app ships with; the table only accepts
-  // inserts from it, and nothing can be read back.
-  (function () {
-    var form = document.getElementById("waitlist-form");
-    var input = document.getElementById("waitlist-email");
-    var button = document.getElementById("waitlist-button");
-    var done = document.getElementById("waitlist-done");
-    var err = document.getElementById("waitlist-err");
-    var URL = "https://nevtprygfiepwtdfacuh.supabase.co/rest/v1/waitlist";
-    var KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ldnRwcnlnZmllcHd0ZGZhY3VoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAyNTg0NTUsImV4cCI6MjEwNTgzNDQ1NX0.Q6Hl50d9VvXKE_s4CB4-ZZ3qiFJA23WiXNoUf5CaAQQ";
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var email = (input.value || "").trim();
-      err.hidden = true;
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { input.focus(); return; }
-      button.disabled = true;
-      fetch(URL, {
-        method: "POST",
-        headers: { "apikey": KEY, "Authorization": "Bearer " + KEY, "Content-Type": "application/json", "Prefer": "return=minimal" },
-        body: JSON.stringify({ email: email, platform: /Android/i.test(navigator.userAgent) ? "android" : (/iPhone|iPad/i.test(navigator.userAgent) ? "ios" : "web") })
-      }).then(function (r) {
-        if (r.ok || r.status === 409) { form.hidden = true; done.hidden = false; }
-        else { throw new Error(String(r.status)); }
-      }).catch(function () { err.hidden = false; button.disabled = false; });
-    });
-  })();
-</script>
 </body>
 </html>
