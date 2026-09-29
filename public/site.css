@@ -74,6 +74,11 @@ p { margin: 0 0 14px; }
 }
 .device img { display: block; width: 100%; height: auto; border-radius: 36px; background: #000; }
 .device.small { width: min(230px, 62%); }
+/* Held sideways, the way a self-tape is filmed */
+.device.wide { width: min(560px, 96%); padding: 9px; border-radius: 40px; }
+.device.wide img { border-radius: 32px; }
+.founder .disc { align-items: center; }
+.founder .disc img { width: 100%; height: 100%; object-fit: cover; }
 .device.will-rise { opacity: 0; transform: translateY(28px) scale(0.985); transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .device.risen { opacity: 1; transform: none; }
 
@@ -136,6 +141,9 @@ footer .made { margin-top: 8px; }
   .split.flip .text { order: 2; }
   .split.flip .device { order: 1; }
   .split .device, .split .device.small { margin: 0 auto; width: min(280px, 100%); }
+  .split .device.wide { width: min(520px, 100%); }
+  .split:has(.device.wide) { grid-template-columns: 1.2fr 0.8fr; }
+  .split.flip:has(.device.wide) { grid-template-columns: 1.2fr 0.8fr; }
   .hero.split { text-align: left; }
   .hero.split .lead { margin-left: 0; }
   .hero.split .stores { justify-content: flex-start; }
