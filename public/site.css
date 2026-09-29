@@ -66,6 +66,7 @@ p { margin: 0 0 14px; }
 .waitlist .err { color: #c62828; font-size: 14px; margin: 8px 0 0; }
 
 .phone { display: block; width: min(300px, 78%); height: auto; margin: 10px auto 0; border-radius: 34px; box-shadow: 0 24px 50px rgba(0,0,0,0.18); background: #000; }
+.phone.small { width: min(230px, 62%); }
 
 section { padding: 38px 0; border-top: 1px solid var(--rule); }
 

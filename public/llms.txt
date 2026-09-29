@@ -1,0 +1,25 @@
+# Booked
+
+> Booked is an iPhone app for actors: a reader that runs your sides with you, comes in on your cue, feeds you the next words when you say "line", and records the self-tape. It also keeps an audition log with stats and a yearly Wrapped. Made by a working actor. iPhone first, Android after.
+
+## What it does
+- Import sides as a PDF, or share the PDF straight from the email it arrived in. Booked works out who says what, including handwritten start and end marks.
+- Rehearse: the reader plays the other characters in a natural voice, waits while you speak, and comes in on your last word. Speech is recognised on the phone; no audio leaves it during a rehearsal.
+- Say "line" when you blank and the reader feeds you the next few words.
+- Record: the same scene with the camera on. Takes save to the Photos library and never leave the phone.
+- Track: log auditions, see auditions per year, yes rate, who calls you in most, and a Wrapped at the end of the year. Signing in (Apple or Google) is needed only for the log.
+
+## Privacy
+Scripts, rehearsals and self-tapes are not used to train AI, by Booked or by the services behind the reader (OpenAI for parsing the script, ElevenLabs for the voices). Self-tapes are never uploaded. Analytics are product interaction only, never script text. Accounts can be deleted from inside the app.
+
+## Pricing
+Downloading, the audition log and the demo scene are free. Building a reader for your own sides is paid by subscription, priced under hiring a reader.
+
+## Pages
+- Home: https://bookedactors.com/
+- Support: https://bookedactors.com/support.html
+- Privacy: https://bookedactors.com/privacy.html
+- Terms: https://bookedactors.com/terms.html
+
+## Contact
+aris@bookedactors.com

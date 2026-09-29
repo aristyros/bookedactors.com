@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Booked: no more asking friends to read</title>
-  <meta name="description" content="Booked is an iPhone app for actors. A reader that runs your sides with you, comes in on your cue, and tapes the take. Learn lines faster, put yourself on tape, get booked more." />
+  <title>Booked: a reader for actors who have no one to run lines with</title>
+  <meta name="description" content="Booked is an iPhone app for actors. A reader that runs your sides with you, comes in on your cue, and tapes the self-tape. Learn lines faster, put yourself on tape without a reader, get booked more." />
   <link rel="icon" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="canonical" href="https://bookedactors.com/" />
@@ -12,10 +12,45 @@
   <meta property="og:title" content="Booked: no more asking friends to read" />
   <meta property="og:description" content="A reader that runs your sides with you, comes in on your cue, and tapes the take. Made for actors by a working actor." />
   <meta property="og:site_name" content="Booked" />
-  <meta property="og:image" content="https://bookedactors.com/icon.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://bookedactors.com/" />
+  <meta property="og:image" content="https://bookedactors.com/shot-rehearse.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="site.css" />
   <script defer src="/_vercel/insights/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Booked",
+        "url": "https://bookedactors.com/",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "iOS",
+        "description": "A reader app for actors: import your sides, rehearse with a reader that listens for your line and comes in on cue, say \"line\" when you blank, record the self-tape, and keep your audition log.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free to download; a subscription unlocks readers for your own sides." },
+        "author": { "@type": "Person", "name": "Aris Tyros", "jobTitle": "Actor" },
+        "featureList": [
+          "AI reader that comes in on your cue",
+          "Say \"line\" to be fed the next words",
+          "Import sides as PDF or share from email",
+          "Record self-tapes with the reader",
+          "Audition log with stats and a yearly Wrapped"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How do I self-tape without a reader?", "acceptedAnswer": { "@type": "Answer", "text": "Use a reader app. Booked reads the other characters' lines in a natural voice, waits while you speak, and comes in on your last word, so you can record the take alone. Casting hears a real back-and-forth rather than you acting against a recording of your own voice." } },
+          { "@type": "Question", "name": "How can I learn lines faster?", "acceptedAnswer": { "@type": "Answer", "text": "Run the scene out loud with a reader, as many times as it takes, and let the reader feed you a few words when you blank instead of stopping to look at the page. In Booked you say \"line\" and it feeds you the next few words and keeps going." } },
+          { "@type": "Question", "name": "Is Booked free?", "acceptedAnswer": { "@type": "Answer", "text": "Downloading, tracking your auditions and the demo scene are free. Building a reader for your own sides is paid, and priced well under hiring a reader." } },
+          { "@type": "Question", "name": "Does Booked use my scripts or self-tapes to train AI?", "acceptedAnswer": { "@type": "Answer", "text": "No. Scripts, rehearsals and self-tapes are not used to train AI, by Booked or by the services behind the reader. Takes never leave your phone." } },
+          { "@type": "Question", "name": "Is Booked on Android?", "acceptedAnswer": { "@type": "Answer", "text": "iPhone first. Android after." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 <div class="wrap">
@@ -26,7 +61,7 @@
 
   <section class="hero" style="border-top: 0;">
     <h1>No more asking friends <span class="mark">for help.</span></h1>
-    <p class="lead">Booked reads the other parts, comes in on your cue, and tapes the take. A reader at 6 a.m. or midnight, for as many takes as you need.</p>
+    <p class="lead">A reader that runs your sides with you, comes in on your cue, and tapes the take.</p>
 
     <div class="stores" aria-label="Download">
       <span class="store soon" aria-disabled="true">
@@ -40,49 +75,63 @@
     </div>
     <p class="stores-note">iPhone first. Android after.</p>
 
-
-    <img class="phone" src="shot-rehearse.jpg" alt="The Rehearse screen: your line bright, the reader's lines dimmed, ready to play" />
+    <img class="phone" src="shot-rehearse.jpg" alt="Booked's Rehearse screen: your line bright, the reader's lines dimmed, ready to play" />
   </section>
 </div>
 
 <section class="band">
   <div class="wrap">
     <h2>Learn lines <span class="mark">faster.</span></h2>
-    <p class="lead">Import the sides your agent sent, or share the PDF straight from the email. Booked works out who says what, and the reader runs it with you as many times as you like.</p>
-    <p>It listens. Say your line and the reader picks up on your last word, like a person would. Blank on a line? Say &ldquo;line&rdquo; and it feeds you the next few words and keeps going.</p>
+    <p class="lead">Import the sides. The reader runs them with you, out loud, as many times as it takes.</p>
+    <img class="phone" src="shot-script.jpg" alt="A script in Booked with Rehearse and Record buttons" />
   </div>
 </section>
 
 <section class="band black">
   <div class="wrap">
-    <h2>Put yourself <span class="mark">on tape.</span></h2>
-    <p class="lead">Same scene, same reader, camera on. No one holding the phone, no one reading flat from the couch. Takes save to your Photos, ready to send.</p>
+    <h2>Blank? Say <span class="mark">&ldquo;line.&rdquo;</span></h2>
+    <p class="lead">It feeds you the next few words and keeps going. Nobody has to know.</p>
+    <img class="phone small" src="shot-rehearse.jpg" alt="The Rehearse screen with the line pill at the top" />
   </div>
 </section>
 
 <section class="band yellow">
   <div class="wrap">
-    <h2>Get <span class="mark white">booked</span> more.</h2>
-    <p class="lead">Log every audition in a few seconds. See your year in charts, your yes rate, who calls you in most, and a Wrapped at the end of it.</p>
-    <img class="phone" src="shot-stats.jpg" alt="Stats: auditions per year and your yes rate" />
+    <h2>Put yourself <span class="mark white">on tape.</span></h2>
+    <p class="lead">Same scene, same reader, camera on. Takes save to your Photos.</p>
+    <img class="phone" src="shot-record.jpg" alt="Booked's Record screen: the scene over the camera, a red record button" />
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Get <span class="mark">booked</span> more.</h2>
+    <p class="lead">Log every audition in seconds. See your year, your yes rate, who calls you in.</p>
+    <img class="phone" src="shot-auditions.jpg" alt="The audition log: projects by month with outcomes" />
   </div>
 </section>
 
 <section class="band black">
   <div class="wrap">
     <h2>Become <span class="mark">THAT</span> actor.</h2>
-    <p class="lead">The one who is always ready. Sides at 11 p.m., tape in by morning, no favours owed.</p>
-    <div class="founder">
-      <div class="disc" aria-hidden="true"></div>
-      <div>
-        <p>I've been acting for over a decade (<em>The Boys</em>, <em>Reacher</em>, <em>Assassin's Creed</em>). I know the feeling: your audition is due tomorrow, your friend isn't free, your roommate is tired of reading, and casting doesn't like hearing you act with a recording of yourself. I made Booked so you never have to ask again.</p>
-        <p class="sign">Break a leg,<br />Aris</p>
-      </div>
-    </div>
+    <p class="lead">The one who is always ready. Sides at 11 p.m., tape in by morning.</p>
+    <img class="phone" src="shot-wrapped.jpg" alt="Your year of auditions, wrapped" />
   </div>
 </section>
 
 <div class="wrap">
+  <section>
+    <h2>Made for actors by an actor</h2>
+    <div class="founder">
+      <div class="disc" aria-hidden="true"></div>
+      <div>
+        <p>I've been acting for over a decade (<em>The Boys</em>, <em>Reacher</em>, <em>Assassin's Creed</em>). I know the feeling: your audition is due tomorrow, your friend isn't free, your roommate is tired of reading, and casting doesn't like hearing you act with a recording of yourself.</p>
+        <p>I made Booked so you never have to ask again.</p>
+        <p class="sign">Break a leg,<br />Aris</p>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="promise">Your scripts, rehearsals and self-tapes will not be used to train AI.</div>
     <p class="quiet" style="margin-top: 14px;">Rehearsals are heard on the phone itself, and takes never leave it. The details are in the <a href="privacy.html">privacy policy</a>.</p>
@@ -90,20 +139,20 @@
 
   <section id="faq">
     <h2>Questions</h2>
-    <details><summary>What do I need?</summary><p>An iPhone and the PDF of your sides. Booked reads it, works out who says what, and builds the reader. No sign-up for that part.</p></details>
+    <details><summary>How do I self-tape without a reader?</summary><p>Use a reader app. Booked reads the other characters in a natural voice, waits while you speak, and comes in on your last word, so you can record the take alone. Casting hears a real back-and-forth, not you acting against a recording of your own voice.</p></details>
+    <details><summary>How can I learn lines faster?</summary><p>Run the scene out loud, with a reader, as many times as it takes. When you blank, say &ldquo;line&rdquo; and Booked feeds you the next few words instead of you stopping to look at the page.</p></details>
+    <details><summary>What do I need?</summary><p>An iPhone and the PDF of your sides. Booked reads it and works out who says what. No sign-up for that part.</p></details>
     <details><summary>Does it work with my sides as they come?</summary><p>Yes. PDFs from casting or your agent, including scans with your start and end marks. A sharp scan works; a blurry photo of a page may not.</p></details>
-    <details><summary>Is it free?</summary><p>Tracking your auditions is free, and so is the demo scene. Building a reader for your own sides costs real money per script, so that part is paid, and it is priced well under hiring a reader.</p></details>
+    <details><summary>Is it free?</summary><p>Downloading, tracking your auditions and the demo scene are free. Building a reader for your own sides costs real money per script, so that part is paid, and priced well under hiring a reader.</p></details>
     <details><summary>Does it learn from my scripts or my tapes?</summary><p>No. Your scripts, rehearsals and self-tapes are not used to train AI, by us or by the services behind the reader. Takes never leave your phone.</p></details>
     <details><summary>Android?</summary><p>After iPhone.</p></details>
     <details><summary>Can I talk to a person?</summary><p>You can talk to me. <a href="mailto:aris@bookedactors.com?subject=Booked">aris@bookedactors.com</a>, or Message Aris from inside the app.</p></details>
   </section>
-
 
   <footer>
     <div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>
     <div class="made">&copy; 2026 Booked</div>
   </footer>
 </div>
-
 </body>
 </html>

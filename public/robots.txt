@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://bookedactors.com/sitemap.xml
+# For AI assistants: https://bookedactors.com/llms.txt
