@@ -38,7 +38,7 @@ p { margin: 0 0 16px; }
 .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; padding: 30px 0 60px; }
 .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
 .hero .note { color: var(--muted); font-size: 15px; margin-top: 14px; }
-.phones { display: flex; justify-content: center; gap: 18px; }
+.phones { display: flex; justify-content: center; gap: 18px; padding-bottom: 34px; }
 .phones img { width: 46%; max-width: 250px; height: auto; border-radius: 34px; box-shadow: 0 30px 60px rgba(0,0,0,0.18); background: #000; }
 .phones img:last-child { transform: translateY(34px); }
 section { padding: 56px 0; border-top: 1px solid var(--rule); }
@@ -62,6 +62,8 @@ footer a { color: var(--muted); margin-right: 18px; }
   body { font-size: 17px; }
   .hero { grid-template-columns: 1fr; gap: 30px; padding-bottom: 40px; }
   .phones img { width: 44%; }
+  .phones { padding-bottom: 18px; }
+  .phones img:last-child { transform: translateY(18px); }
   .grid3 { grid-template-columns: 1fr; gap: 26px; }
   .founder { grid-template-columns: 1fr; }
   .founder .disc { width: 140px; height: 140px; }
