@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy: Booked</title>
+  <meta name="description" content="How Booked handles your scripts, rehearsals, self-tapes, audition log and account." />
+  <link rel="icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="canonical" href="https://bookedactors.com/privacy.html" />
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/"><img src="wordmark.png" alt="Booked" /></a>
+    <nav><a href="/">Home</a><a href="support.html">Support</a></nav>
+  </header>
+  <main class="doc">
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated September 29, 2026</p>
+<p>Booked is an iPhone app for actors: a reader for your sides, a place to record self-tapes, and a log of your auditions. It is made by BuyBye Inc. in Toronto, Canada. This page says what the app collects, what it does with it, and what it never does.</p>
+<h2>The short version</h2>
+<ul>
+  <li>Your scripts, rehearsals and self-tapes are not used to train AI. Not by us, and not by the services we use.</li>
+  <li>Your self-tapes stay on your phone, in the app and in your Photos library. They are never uploaded.</li>
+  <li>The text of a script is sent to two services to make the reader: one to understand the script, one to voice the other characters. Both are contractually barred from keeping it or training on it.</li>
+  <li>You only need an account for the audition log. Everything else works without one.</li>
+  <li>You can delete your account from inside the app. It removes your account and your audition log for good.</li>
+</ul>
+<h2>What the app collects</h2>
+<h3>Scripts</h3>
+<p>When you import a PDF, the app reads its text on your phone. To turn that text into a scene the reader can play, the text is sent to a language model service (OpenAI) that identifies the characters and their lines, and the other characters&rsquo; lines are sent to a voice service (ElevenLabs) that records them. Both process the text to give you the reader and nothing else. The PDF itself stays on your phone.</p>
+<h3>Rehearsals</h3>
+<p>While you rehearse, the app listens for your lines so the reader knows when to come in. That listening happens on the phone, using Apple&rsquo;s on-device speech recognition. No audio of you leaves the phone during a rehearsal.</p>
+<h3>Self-tapes</h3>
+<p>Takes are recorded with the phone&rsquo;s camera and microphone and saved to your Photos library, with a copy kept in the app until Photos has it. They are never uploaded anywhere.</p>
+<h3>Account and audition log</h3>
+<p>If you track your auditions, you sign in with Apple or Google. We receive the name and email address the provider gives us, or Apple&rsquo;s private relay address if you hide your email. Your audition log (projects, roles, dates, outcomes and the notes you type) is stored in our database (Supabase, hosted in Canada) so it follows you across devices.</p>
+<h3>A device identity</h3>
+<p>On first launch the app creates an anonymous account, with no name or email, so that if you ever write in for help we can find your records from the Support ID shown in Settings. Signing in with Apple or Google attaches to that same identity.</p>
+<h3>Analytics</h3>
+<p>We use Mixpanel to understand how the app is used: which screens are reached, whether an import succeeded or failed and why, whether a rehearsal was completed, and the like. These events carry counts, types and durations, and are tied to your device identity. They never contain script text, character names, project names, file names, audio or transcripts. We do not use this data for advertising, and we do not share it with data brokers.</p>
+<h3>Purchases</h3>
+<p>Subscriptions are handled by Apple. We never see your payment details. We keep a record of the purchase, keyed by Apple&rsquo;s transaction identifier, to provide what you paid for and to answer refund requests.</p>
+<h2>What we do not do</h2>
+<ul>
+  <li>We do not sell your data, and we do not share it with anyone for advertising.</li>
+  <li>We do not use your scripts, rehearsals or self-tapes to train AI, and the services we use are barred from doing so.</li>
+  <li>We do not upload your self-tapes.</li>
+  <li>We do not track you across other apps or websites.</li>
+</ul>
+<h2>Services we rely on</h2>
+<ul>
+  <li><strong>OpenAI</strong>: understands a script&rsquo;s text so the reader knows who says what. API data is not used to train their models.</li>
+  <li><strong>ElevenLabs</strong>: voices the other characters&rsquo; lines. API data is not used to train their models.</li>
+  <li><strong>Supabase</strong>: stores accounts and audition logs, in Canada.</li>
+  <li><strong>Mixpanel</strong>: product analytics, as described above.</li>
+  <li><strong>Apple</strong>: sign in, purchases, and on-device speech recognition.</li>
+  <li><strong>Google</strong>: sign in, if you choose it.</li>
+</ul>
+<h2>Keeping and deleting</h2>
+<p>Scripts, takes and the reader&rsquo;s audio live on your phone and go when you delete them or the app. Your account and audition log stay until you delete your account in Settings, which removes them for good. Purchase records are kept as long as the law and Apple&rsquo;s refund process require.</p>
+<h2>Children</h2>
+<p>Booked is for adults and is not directed at children under 13.</p>
+<h2>Changes</h2>
+<p>If this policy changes in a way that matters, the app will say so. The date at the top is the date of the current version.</p>
+<h2>Contact</h2>
+<p>Write to Aris at <a href="mailto:aris@bookedactors.com">aris@bookedactors.com</a>. Quoting the Support ID from Settings helps.</p>
+  </main>
+  <footer>
+    <div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>
+    <div>Booked is made by BuyBye Inc., Toronto.</div>
+  </footer>
+</div>
+</body>
+</html>
