@@ -117,7 +117,18 @@ footer .made { margin-top: 8px; }
 .doc ul { padding-left: 22px; }
 
 @media (min-width: 720px) {
+  :root { --max: 960px; }
   .hero { padding-top: 34px; }
   .founder { grid-template-columns: 120px 1fr; gap: 24px; }
   .founder .disc { width: 120px; height: 120px; }
+  /* Desktop: words on one side, the phone on the other, sides alternating band by band */
+  .split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
+  .split.flip { grid-template-columns: 0.85fr 1.15fr; }
+  .split.flip .text { order: 2; }
+  .split.flip .phone { order: 1; }
+  .split .phone, .split .phone.small { margin: 0 auto; width: min(280px, 100%); }
+  .hero.split { text-align: left; }
+  .hero.split .lead { margin-left: 0; }
+  .hero.split .stores { justify-content: flex-start; }
+  .band .split .text h2 { font-size: clamp(38px, 5vw, 56px); }
 }
