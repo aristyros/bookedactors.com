@@ -15,6 +15,17 @@ Scripts, rehearsals and self-tapes are not used to train AI, by Booked or by the
 ## Pricing
 Downloading, the audition log and the demo scene are free. Building a reader for your own sides is paid by subscription, priced under hiring a reader.
 
+## FAQ
+- How do I self-tape without a reader? Use a reader app. Booked reads the other characters in a natural voice, waits while you speak, and comes in on your last word, so you can record the take alone.
+- How can I learn lines faster? Run the scene out loud with a reader as many times as it takes. When you blank, call "line" and Booked feeds you the next few words.
+- What do I need? An iPhone and the PDF of your sides.
+- How do I get sides from my email into Booked? Open the email, tap the PDF, tap Share, pick Booked. The first time, Booked is under More: tap More, then Edit, then the + beside Booked, then the checkmark.
+- Does it work with sides as they come? Yes, PDFs from casting or an agent, including sharp scans with start and end marks. Sides over 12 pages are not accepted.
+- Is it free? Downloading, tracking auditions and the demo scene are free. Building a reader for your own sides is paid.
+- Does it learn from my scripts or tapes? No. Nothing is used to train AI, and takes never leave the phone.
+- Android? Coming after iPhone.
+- Support: email aris@bookedactors.com, or Message Aris inside the app, which includes your Support ID.
+
 ## Pages
 - Home: https://bookedactors.com/
 - Support: https://bookedactors.com/support.html
