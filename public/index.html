@@ -63,7 +63,7 @@
   <section class="hero split" style="border-top: 0;">
     <div class="text">
     <h1>Get <span class="mark">booked.</span></h1>
-    <p class="lead">Learn lines, rehearse and self-tape whenever you want. A reader that runs your sides with you and comes in on your cue.</p>
+    <p class="lead">Learn lines, rehearse and self-tape whenever you want.</p>
 
     <div class="stores" aria-label="Download">
       <span class="store soon" aria-disabled="true">
@@ -123,7 +123,7 @@
 <section class="band black">
   <div class="wrap split">
     <div class="text"><h2>Become <span class="mark">THAT</span> actor.</h2>
-    <p class="lead">The one who is always ready. And at the end of the year, the numbers to prove it.</p></div>
+    <p class="lead">The one who is always ready and at the end of the year has the numbers to prove it.</p></div>
     <div class="device"><img src="shot-wrapped-3.jpg" alt="Your year of auditions, wrapped: auditions, yeses, bookings" /></div>
   </div>
 </section>
@@ -178,6 +178,13 @@
     }, { threshold: 0.25 });
     devices.forEach(function (d) { io.observe(d); });
   })();
+  // FAQ: a tap anywhere inside an open answer closes it (links still work).
+  document.querySelectorAll("#faq details").forEach(function (d) {
+    d.addEventListener("click", function (e) {
+      if (e.target.closest("summary") || e.target.closest("a")) return;
+      d.open = false;
+    });
+  });
 </script>
 </body>
 </html>
