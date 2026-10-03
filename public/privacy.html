@@ -19,14 +19,15 @@
   </header>
   <main class="doc">
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated September 29, 2026</p>
+<p class="updated">Last updated October 3, 2026</p>
 <p>Booked is made by BuyBye Inc., Ontario, Canada. This page says what the app collects, what it does with it, and what it never does.</p>
 <h2>The short version</h2>
 <ul>
   <li>Your scripts, rehearsals and self-tapes are not used to train AI. Not by us, and not by the services we use.</li>
   <li>Booked never uploads your self-tapes. They stay on your phone and in your Photos library unless you share them or your iPhone backs them up.</li>
   <li>A script&rsquo;s text (and, for scans, the page images) goes to two services to make the reader: one to understand the script, one to voice the other characters. Neither trains on it.</li>
-  <li>You only need to sign in for the audition log. Everything else works without signing in.</li>
+  <li>The app makes an anonymous account the first time it opens. You only need to sign in for the audition log.</li>
+  <li>Subscriptions are handled by Apple. We never see your payment details. We keep a record of what Apple tells us about your subscription so we can provide what you paid for.</li>
   <li>You can delete your account from inside the app. It removes your account and your audition log for good.</li>
 </ul>
 <h2>What the app collects</h2>
@@ -36,16 +37,20 @@
 <p>While you rehearse, the app listens for your lines so the reader knows when to come in. That listening happens on the phone, using Apple&rsquo;s on-device speech recognition. No audio of you leaves the phone during a rehearsal.</p>
 <h3>Self-tapes</h3>
 <p>Takes are recorded with the phone&rsquo;s camera and microphone and saved to your Photos library, with a copy kept in the app until Photos has it. Booked never uploads them. They leave your phone only if you share one, or through your own iCloud backup and iCloud Photos.</p>
-<h3>Account and audition log</h3>
-<p>If you track your auditions, you sign in with Apple or Google. We receive the name and email address the provider gives us, or Apple&rsquo;s private relay address if you hide your email. Your audition log (projects, roles, dates, outcomes and the notes you type) is stored in our database (Supabase, hosted in Canada) so it follows you across devices.</p>
-<h3>A device identity</h3>
-<p>On first launch the app creates an anonymous account: an ID and a creation date, with no name, email or content. It is what the Support ID in Settings points to, so we can find your records if you write in. Signing in with Apple or Google attaches to that same ID.</p>
+<h3>Your account</h3>
+<p>On first launch the app creates an anonymous account: an ID and a creation date, with no name, email or content. It is what the Support ID in Settings points to, so we can find your records if you write in. Everything the app does for you, including a subscription, is tied to that ID. If you sign in with Apple or Google, the sign-in attaches to the same ID and we receive the name and email address the provider gives us, or Apple&rsquo;s private relay address if you hide your email.</p>
+<h3>Audition log</h3>
+<p>If you track your auditions, your log (projects, roles, dates, outcomes and the notes you type) is stored in our database (Supabase, hosted in Canada) so it follows you across devices. The log needs a sign-in.</p>
+<h3>Subscriptions and purchases</h3>
+<p>Subscriptions are bought through Apple. We never see your card or your Apple ID password. Apple, through our subscription service (Superwall), tells us what happened to your subscription: a purchase, a renewal, a cancellation, an expiry or a refund, with the product, the price and currency, the dates, and the offer code if one was used. We keep those events keyed by Apple&rsquo;s transaction identifier and linked to your account ID. We use them to switch the reader on and off, to answer refund questions, and to award referral months. Our server also records what it costs us to build each reader, as an amount and a time, not as script text, so a subscription stays within what it pays for.</p>
+<h3>Codes and referrals</h3>
+<p>If you type a code in the app, we record the code you typed, when, and whether it led to a subscription. When the code is a friend&rsquo;s referral code, we also record which account it belongs to, so your friend can earn a free month. Whoever gave you a code can learn how many people used it, never who. If you share your own code, the app shows you how many people used it and how many free months you earned, nothing about them.</p>
+<h3>Free scripts we add by hand</h3>
+<p>If we add a free script to your account after you write in, we note the grant against your Support ID, with the date and what it covered. If you wrote to us, we keep that email.</p>
 <h3>Analytics</h3>
-<p>We use Mixpanel to understand how the app is used: which screens are reached, whether an import succeeded or failed and why, whether a rehearsal was completed, and the like. These events carry counts, types and durations, and are tied to your device identity. They never contain script text, character names, project names, file names, audio or transcripts. We do not use this data for advertising, and we do not share it with data brokers.</p>
+<p>We use Mixpanel to understand how the app is used: which screens are reached, whether an import succeeded or failed and why, whether a rehearsal was completed, whether a code was entered or a free month claimed, and the like. These events carry counts, types and durations, and are tied to your account ID. They never contain script text, character names, project names, file names, audio or transcripts. We do not use this data for advertising, and we do not share it with data brokers. If you would rather not be counted, write to us with your Support ID and we switch it off for your account.</p>
 <h3>Advertising measurement</h3>
-<p>To learn which ads bring people to Booked, our paywall service (Superwall) may match an install to the ad that led to it and report subscriptions back to the ad network (such as Meta or Apple Search Ads). This uses no advertising identifier and does not follow you across other apps.</p>
-<h3>Purchases</h3>
-<p>Subscriptions are handled by Apple. We never see your payment details. We keep a record of the purchase, keyed by Apple&rsquo;s transaction identifier, to provide what you paid for and to answer refund requests.</p>
+<p>To learn which ads bring people to Booked, our subscription service (Superwall) may match an install to the ad that led to it and report subscriptions back to the ad network (such as Meta or Apple Search Ads). This uses no advertising identifier and does not follow you across other apps.</p>
 <h2>What we do not do</h2>
 <ul>
   <li>We do not sell your data.</li>
@@ -57,20 +62,20 @@
 <ul>
   <li><strong>OpenAI</strong>: understands a script so the reader knows who says what. Training is off.</li>
   <li><strong>ElevenLabs</strong>: voices the other characters&rsquo; lines. Training is off.</li>
-  <li><strong>Supabase</strong>: stores accounts and audition logs, in Canada.</li>
+  <li><strong>Supabase</strong>: stores accounts, audition logs, subscription events, codes and referral months, in Canada.</li>
   <li><strong>Mixpanel</strong>: product analytics, as described above.</li>
-  <li><strong>Superwall</strong>: subscriptions and advertising measurement.</li>
-  <li><strong>Apple</strong>: sign in, purchases, and on-device speech recognition.</li>
+  <li><strong>Superwall</strong>: subscriptions, Apple&rsquo;s subscription notifications, and advertising measurement.</li>
+  <li><strong>Apple</strong>: sign in, purchases, refunds, and on-device speech recognition.</li>
   <li><strong>Google</strong>: sign in, if you choose it.</li>
 </ul>
 <h3>Diagnostics</h3>
 <p>If the app crashes and your iPhone is set to share crash reports, Apple sends us one. It describes what the app was doing, never your script or your camera.</p>
 <h2>Where your data is processed</h2>
-<p>Accounts and audition logs are stored in Canada. OpenAI, ElevenLabs, Mixpanel and Superwall are in the United States, so script text and usage events are processed there, under this policy.</p>
+<p>Accounts, audition logs and subscription records are stored in Canada. OpenAI, ElevenLabs, Mixpanel and Superwall are in the United States, so script text, usage events and subscription events are processed there, under this policy.</p>
 <h2>Why we are allowed to</h2>
-<p>For the EU and UK: we process your data to provide what you asked for (the reader, the takes, the log), and on our legitimate interest in understanding how the app is used and which ads bring people to it. The phone&rsquo;s permission prompts cover the phone&rsquo;s features. You can ask us to stop the analytics or ad measurement for your device at any time.</p>
+<p>For the EU and UK: we process your data to provide what you asked for (the reader, the takes, the log, the subscription), and on our legitimate interest in understanding how the app is used, keeping subscriptions within what they pay for, and learning which ads bring people to it. The phone&rsquo;s permission prompts cover the phone&rsquo;s features. You can ask us to stop the analytics or ad measurement for your account at any time.</p>
 <h2>Keeping and deleting</h2>
-<p>Scripts, takes and the reader&rsquo;s audio live on your phone and go when you delete them or the app; our server keeps none of them. Your account and audition log stay until you delete your account in Settings. Deleting removes the account and the log for good; analytics events stay for up to two years under an ID that no longer links to anyone, and we delete them too if you ask. Purchase records are kept as long as the law and Apple&rsquo;s refund process require.</p>
+<p>Scripts, takes and the reader&rsquo;s audio live on your phone and go when you delete them or the app; our server keeps none of them. Your account and audition log stay until you delete your account in Settings. Deleting removes the account, the log, your referral code and any free months you had not yet claimed, for good. Analytics events stay for up to two years under an ID that no longer links to anyone, and we delete them too if you ask. Subscription and purchase records are kept, under Apple&rsquo;s transaction identifier and no longer linked to a name or email, for as long as the law and Apple&rsquo;s refund process require. Deleting the app or your account does not cancel an Apple subscription; see the <a href="support.html#cancel">support page</a>.</p>
 <h2>Your rights</h2>
 <p>You can ask to see, correct, export or delete the personal data we hold about you, or object to how we use it. Deleting your account from Settings does most of this. For anything else, write to us; we answer within a month. You can also complain to your data protection authority.</p>
 <h2>Children</h2>
