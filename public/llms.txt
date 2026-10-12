@@ -23,7 +23,7 @@ Downloading, the audition log and the demo scene are free. Building a reader for
 - Does it work with sides as they come? Yes, PDFs from casting or an agent, including sharp scans with start and end marks. Sides over 12 pages are not accepted.
 - Is it free? Downloading, tracking auditions and the demo scene are free. Building a reader for your own sides is paid.
 - Does it learn from my scripts or tapes? No. Nothing is used to train AI, and takes never leave the phone.
-- Android? Coming after iPhone.
+- Android? After iPhone. There is an email waitlist on the home page (one note when it is on Google Play).
 - Support: email aris@bookedactors.com, or Message Aris inside the app, which includes your Support ID.
 
 ## Pages
