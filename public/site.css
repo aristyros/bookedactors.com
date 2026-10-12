@@ -47,9 +47,14 @@ p { margin: 0 0 14px; }
 .store.soon { background: var(--soft); color: var(--muted); border: 1px solid var(--rule); cursor: default; }
 .store.soon:hover { text-decoration: none; }
 .stores-note { color: var(--muted); font-size: 14px; margin: 0 0 22px; }
+/* The Android waitlist opener: a real button in the badge's shape, the only live one before launch */
+button.store.play { font: inherit; border: 0; cursor: pointer; background: var(--yellow); color: #111; box-shadow: 0 2px 10px rgba(0,0,0,0.18); }
+button.store.play:hover { filter: brightness(0.96); }
+button.store.play:active { transform: translateY(1px); }
+button.store.play small { opacity: 0.75; }
 
 /* Waitlist: the one thing a visitor can do before launch */
-.waitlist { max-width: 480px; margin: 0 auto 26px; }
+.waitlist { max-width: 480px; margin: -12px auto 26px; }
 .waitlist form { display: flex; gap: 8px; }
 .waitlist input {
   flex: 1; min-width: 0; height: 52px; padding: 0 14px; font-size: 17px; border-radius: 12px;
