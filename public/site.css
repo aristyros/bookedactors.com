@@ -52,6 +52,10 @@ button.store.play { font: inherit; border: 0; cursor: pointer; background: var(-
 button.store.play:hover { filter: brightness(0.96); }
 button.store.play:active { transform: translateY(1px); }
 button.store.play small { opacity: 0.75; }
+/* iPhone waitlist, until the App Store badge replaces it: the ink pill, same shape as the Play button. */
+button.store.apple { font: inherit; border: 0; cursor: pointer; background: var(--ink); color: var(--paper); box-shadow: 0 2px 10px rgba(0,0,0,0.18); }
+button.store.apple:hover { filter: brightness(1.15); }
+button.store.apple:active { transform: translateY(1px); }
 
 /* Waitlist: the one thing a visitor can do before launch */
 /* The Android waitlist is a dialog: nothing on the page but the button */
