@@ -183,6 +183,11 @@
     <div class="made">&copy; 2026 Booked</div>
   </footer>
 </div>
+<div class="inapp-card" id="inapp-card" hidden>
+  <div class="inapp-arrow" aria-hidden="true">&#8599;</div>
+  <p><b>Tap ••• up here</b><br>then <b>Open in browser</b><br>to get Booked on the App Store.</p>
+  <small>Tap anywhere to close</small>
+</div>
 <dialog class="waitlist" id="waitlist" aria-labelledby="waitlist-title">
   <h3 id="waitlist-title">Booked on Android</h3>
   <form id="waitlist-form" novalidate>
@@ -208,16 +213,18 @@
     }, { threshold: 0.25 });
     devices.forEach(function (d) { io.observe(d); });
   })();
-  // In-app browsers (TikTok, Instagram, Facebook) often refuse to hand
-  // apps.apple.com to the App Store ("Action cannot be completed"). Use the
-  // itms-apps scheme there, and show how to open the page in Safari.
+  // In-app browsers (TikTok, Instagram, Facebook) refuse to hand the App Store
+  // link over ("Action cannot be completed", Nov 10). A tap there shows a card
+  // pointing at the ••• menu → Open in browser; Safari then opens the store.
   (function () {
     var ua = navigator.userAgent || "";
     if (!/BytedanceWebview|musical_ly|TikTok|Instagram|FBAN|FBAV/i.test(ua)) return;
-    document.querySelectorAll('a[href^="https://apps.apple.com/app/id6818271531"]').forEach(function (a) {
-      a.href = "itms-apps://apps.apple.com/app/id6818271531";
-    });
     var h = document.getElementById("inapp-hint"); if (h) h.hidden = false;
+    var card = document.getElementById("inapp-card");
+    document.querySelectorAll('a[href^="https://apps.apple.com/app/id6818271531"]').forEach(function (a) {
+      a.addEventListener("click", function (e) { e.preventDefault(); card.hidden = false; });
+    });
+    card.addEventListener("click", function () { card.hidden = true; });
   })();
   // Android waitlist: one row in Supabase `waitlist` (anon insert only), platform "android".
   // iPhone is live, so the apple opener is now a plain App Store link.

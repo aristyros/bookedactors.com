@@ -176,3 +176,8 @@ footer .social svg { width: 22px; height: 22px; fill: currentColor; }
 }
 
 .inapp-hint { color: var(--muted); font-size: 14px; margin: -18px 0 22px; }
+.inapp-card { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,0.88); color: #fff; padding: 28px 24px; text-align: right; }
+.inapp-card[hidden] { display: none; }
+.inapp-arrow { font-size: 72px; line-height: 1; margin-right: 4px; }
+.inapp-card p { font-size: 24px; line-height: 1.35; margin: 12px 0 0; }
+.inapp-card small { display: block; margin-top: 28px; opacity: 0.7; font-size: 14px; }
