@@ -174,3 +174,5 @@ footer .social svg { width: 22px; height: 22px; fill: currentColor; }
   .hero.split .stores { justify-content: flex-start; }
   .band .split .text h2 { font-size: clamp(38px, 5vw, 56px); }
 }
+
+.inapp-hint { color: var(--muted); font-size: 14px; margin: -18px 0 22px; }

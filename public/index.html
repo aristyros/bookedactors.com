@@ -84,6 +84,7 @@
         <span><small>Android?</small><b>Join the waitlist</b></span>
       </button>
     </div>
+    <p class="inapp-hint" id="inapp-hint" hidden>Not opening? Tap ••• at the top and choose Open in browser.</p>
 
     </div>
     <div class="device"><img src="shot-rehearse.jpg" alt="Booked's Rehearse screen: your line bright, the reader's lines dimmed, ready to play" /></div>
@@ -206,6 +207,17 @@
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("risen"); io.unobserve(e.target); } });
     }, { threshold: 0.25 });
     devices.forEach(function (d) { io.observe(d); });
+  })();
+  // In-app browsers (TikTok, Instagram, Facebook) often refuse to hand
+  // apps.apple.com to the App Store ("Action cannot be completed"). Use the
+  // itms-apps scheme there, and show how to open the page in Safari.
+  (function () {
+    var ua = navigator.userAgent || "";
+    if (!/BytedanceWebview|musical_ly|TikTok|Instagram|FBAN|FBAV/i.test(ua)) return;
+    document.querySelectorAll('a[href^="https://apps.apple.com/app/id6818271531"]').forEach(function (a) {
+      a.href = "itms-apps://apps.apple.com/app/id6818271531";
+    });
+    var h = document.getElementById("inapp-hint"); if (h) h.hidden = false;
   })();
   // Android waitlist: one row in Supabase `waitlist` (anon insert only), platform "android".
   // iPhone is live, so the apple opener is now a plain App Store link.
