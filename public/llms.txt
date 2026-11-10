@@ -1,6 +1,6 @@
 # Booked
 
-> Booked is an iPhone app for actors: a reader that runs your sides with you, comes in on your cue, feeds you the next words when you say "line", and records the self-tape. It also keeps an audition log with stats and a yearly Wrapped. Made by a working actor. iPhone first, Android after.
+> Booked is an iPhone app for actors: a reader that runs your sides with you, comes in on your cue, feeds you the next words when you say "line", and records the self-tape. It also keeps an audition log with stats and a yearly Wrapped. Made by a working actor. On the App Store for iPhone: https://apps.apple.com/app/id6818271531. Android after.
 
 ## What it does
 - Import sides as a PDF, or share the PDF straight from the email it arrived in. Booked works out who says what, including handwritten start and end marks.
