@@ -1,9 +1,10 @@
 {
   "note": "Read by the Booked app (? > Scripts to try). Add a PDF to this folder and a line here, push, and it shows in the app. Only scripts you have the right to share.",
   "scripts": [
-    { "title": "The Last Ferry", "about": "June and Noah, a goodbye on the dock. 2 pages.", "file": "the-last-ferry.pdf" },
-    { "title": "Orchard Road", "about": "Priya and Dev, a family bakery. 2 pages.", "file": "orchard-road.pdf" },
-    { "title": "Static 206", "about": "Renata and Cal, a radio station at 3 AM. 2 pages.", "file": "static-206.pdf" },
-    { "title": "The Night Shift", "about": "Jordan and Sam, a diner after closing. 1 page.", "file": "the-night-shift.pdf" }
+    {
+      "title": "The Last Ferry",
+      "about": "June and Noah, a goodbye on the dock. 2 pages.",
+      "file": "the-last-ferry.pdf"
+    }
   ]
 }
