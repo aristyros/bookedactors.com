@@ -2,14 +2,14 @@
   "note": "Read by the Booked app (? > Scripts to try). Add a PDF to this folder and a line here, push, and it shows in the app. Only scripts you have the right to share.",
   "scripts": [
     {
-      "title": "The Last Ferry",
-      "about": "June and Noah, a goodbye on the dock. 2 pages.",
-      "file": "the-last-ferry.pdf"
-    },
-    {
       "title": "Half Moon Bay",
       "about": "Detective Ava questions Luke. 1 page.",
       "file": "half-moon-bay.pdf"
+    },
+    {
+      "title": "Blue Plate",
+      "about": "Dana tells Marco, her cook of eight years, she's selling the diner. 2 pages.",
+      "file": "blue-plate.pdf"
     }
   ]
 }
