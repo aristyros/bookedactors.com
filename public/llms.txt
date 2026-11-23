@@ -13,7 +13,7 @@
 Scripts, rehearsals and self-tapes are not used to train AI, by Booked or by the services behind the reader (OpenAI for parsing the script, ElevenLabs for the voices). Self-tapes are never uploaded. Analytics are product interaction only, never script text. Accounts can be deleted from inside the app.
 
 ## Pricing
-Free to download. The audition tracker and the demo scene are free. A reader for your own sides comes with an auto-renewing monthly subscription through the App Store, US$14.99 a month (local prices vary), priced under hiring a reader.
+Free to download. The audition tracker and the demo scene are free. A reader for your own sides comes with an auto-renewing monthly subscription through the App Store, priced under hiring a reader.
 
 ## FAQ
 - How do I self-tape without a reader? Use a self-tape reader app. Booked reads the other characters in a natural voice, waits while you speak, and comes in on your last word, so you can record the take alone.
