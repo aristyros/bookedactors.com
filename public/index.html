@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Booked: the app to learn lines, rehearse and self-tape</title>
-  <meta name="description" content="Booked is the app to learn lines: a reader that runs your sides with you, comes in on your cue, feeds you the next line when you blank, and records the self-tape. Made for actors by a working actor." />
+  <meta name="description" content="Booked is the app to memorize lines, rehearse and record self-tapes without a reader. It reads the other characters, comes in on your cue, and feeds you the next line when you blank. Made for actors by a working actor." />
   <link rel="icon" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="canonical" href="https://bookedactors.com/" />
@@ -25,11 +25,41 @@
         "@type": "SoftwareApplication",
         "name": "Booked",
         "url": "https://bookedactors.com/",
-        "applicationCategory": "EntertainmentApplication",
+        "applicationCategory": "LifestyleApplication",
         "operatingSystem": "iOS",
+        "inLanguage": "en",
         "downloadUrl": "https://apps.apple.com/app/id6818271531",
-        "description": "A reader app for actors: import your sides, rehearse with a reader that listens for your line and comes in on cue, say \"line\" when you blank, record the self-tape, and keep your audition log.",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free to download; a subscription unlocks readers for your own sides." },
+        "image": "https://bookedactors.com/icon.png",
+        "screenshot": [
+          "https://bookedactors.com/shot-rehearse.jpg",
+          "https://bookedactors.com/shot-home.jpg",
+          "https://bookedactors.com/shot-record-landscape.jpg",
+          "https://bookedactors.com/shot-auditions.jpg"
+        ],
+        "description": "A self-tape reader app for actors. Import your sides, rehearse with a reader that plays the other characters and comes in on your cue, memorize your lines by calling \"line\" when you blank, record self-tapes without a reader, and track your auditions.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Free download",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free to download. The audition tracker and the demo scene are free."
+          },
+          {
+            "@type": "Offer",
+            "name": "Booked monthly subscription",
+            "price": "14.99",
+            "priceCurrency": "USD",
+            "description": "Auto-renewing monthly subscription, billed through the App Store. Builds a reader for your own sides so you can rehearse and record with it.",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "14.99",
+              "priceCurrency": "USD",
+              "billingDuration": "P1M",
+              "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" }
+            }
+          }
+        ],
         "author": { "@type": "Person", "name": "Aris Tyros", "jobTitle": "Actor" },
         "sameAs": [
           "https://apps.apple.com/app/id6818271531",
@@ -39,22 +69,29 @@
           "https://www.facebook.com/bookedactors"
         ],
         "featureList": [
-          "AI reader that comes in on your cue",
-          "Call \"line\" to be fed the next words",
-          "Import sides as PDF or share from email",
-          "Record self-tapes with the reader",
-          "Audition log with stats and a yearly Wrapped"
+          "Audition reader that plays the other characters and comes in on your cue",
+          "Rehearse scenes without a scene partner",
+          "Memorize lines: call \"line\" when you blank and hear the next few words",
+          "Record self-tapes without a reader",
+          "Import sides as a PDF or share them straight from email",
+          "Audition tracker with stats and a yearly Wrapped"
         ]
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "How do I self-tape without a reader?", "acceptedAnswer": { "@type": "Answer", "text": "Use a reader app. Booked reads the other characters' lines in a natural voice, waits while you speak, and comes in on your last word, so you can record the take alone. Casting hears a real back-and-forth rather than you acting against a recording of your own voice." } },
-          { "@type": "Question", "name": "How can I learn lines faster?", "acceptedAnswer": { "@type": "Answer", "text": "Run the scene out loud with a reader, as many times as it takes, and let the reader feed you a few words when you blank instead of stopping to look at the page. In Booked you call \"line\" and it feeds you the next few words and keeps going." } },
-          { "@type": "Question", "name": "How do I get sides from my email into Booked?", "acceptedAnswer": { "@type": "Answer", "text": "Open the email, tap the PDF, tap Share, and pick Booked. The first time, Booked is under More: tap More, then Edit, then the + beside Booked, then the checkmark to save. From then on it sits at the front of the share sheet." } },
-          { "@type": "Question", "name": "Is Booked free?", "acceptedAnswer": { "@type": "Answer", "text": "Downloading, tracking your auditions and the demo scene are free. Building a reader for your own sides is paid, and priced well under hiring a reader." } },
-          { "@type": "Question", "name": "Does Booked use my scripts or self-tapes to train AI?", "acceptedAnswer": { "@type": "Answer", "text": "No. Scripts, rehearsals and self-tapes are not used to train AI, by Booked or by the services behind the reader. Takes never leave your phone." } },
-          { "@type": "Question", "name": "Is there an Android version of Booked?", "acceptedAnswer": { "@type": "Answer", "text": "Coming soon, after iPhone." } }
+          { "@type": "Question", "name": "How do I self-tape without a reader?", "acceptedAnswer": { "@type": "Answer", "text": "Use a self-tape reader app. Booked reads the other characters in a natural voice, waits while you speak, and comes in on your last word, so you can record the take alone. Casting hears a real back-and-forth, not you acting against a recording of your own voice." } },
+          { "@type": "Question", "name": "Is there an app to help me memorize lines?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Booked runs the scene with you as many times as you like. The reader plays the other characters, so you memorize your lines on their cues, the way you'll play them in the room. When you blank, call \"line\" and it feeds you the next few words." } },
+          { "@type": "Question", "name": "How can I learn lines faster?", "acceptedAnswer": { "@type": "Answer", "text": "Run the scene out loud, with a reader, as many times as it takes. When you blank, call \"line\" and Booked feeds you the next few words instead of you stopping to look at the page." } },
+          { "@type": "Question", "name": "Can I rehearse a scene without a scene partner?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Booked's reader plays every other character, waits for you, and picks up on your last word. Rehearse at 11 p.m. or ten minutes before you tape, as often as you need." } },
+          { "@type": "Question", "name": "What do I need?", "acceptedAnswer": { "@type": "Answer", "text": "An iPhone and the PDF of your sides. Booked reads it and works out who says what." } },
+          { "@type": "Question", "name": "How do I get sides from my email into Booked?", "acceptedAnswer": { "@type": "Answer", "text": "Open the email, tap the PDF, tap Share, pick Booked. The first time, Booked is under More: tap More, then Edit, then the + beside Booked, then the checkmark to save." } },
+          { "@type": "Question", "name": "Does it work with my sides as they come?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PDFs from casting or your agent, including scans with your start and end marks. A sharp scan works; a blurry photo of a page may not." } },
+          { "@type": "Question", "name": "Is Booked free?", "acceptedAnswer": { "@type": "Answer", "text": "Downloading, tracking your auditions and the demo scene are free. A reader for your own sides comes with a monthly subscription, priced well under hiring a reader." } },
+          { "@type": "Question", "name": "Does Booked learn from my scripts or my tapes?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your scripts, rehearsals and self-tapes are not used to train AI, by us or by the services behind the reader. Takes never leave your phone." } },
+          { "@type": "Question", "name": "Is Booked on the App Store?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, for iPhone: https://apps.apple.com/app/id6818271531" } },
+          { "@type": "Question", "name": "Is there an Android version of Booked?", "acceptedAnswer": { "@type": "Answer", "text": "After iPhone. Leave your email on bookedactors.com and you'll get one note when it's on Google Play." } },
+          { "@type": "Question", "name": "Can I talk to a person?", "acceptedAnswer": { "@type": "Answer", "text": "You can talk to Aris, the actor who made Booked: aris@bookedactors.com, or Message Aris from inside the app." } }
         ]
       }
     ]
@@ -110,7 +147,7 @@
 <section class="band yellow">
   <div class="wrap split flip">
     <div class="text"><h2>Put yourself <span class="mark white">on tape.</span></h2>
-    <p class="lead">Record self-tapes solo.</p></div>
+    <p class="lead">Record self-tapes without a reader. Booked reads the other lines while you film.</p></div>
     <div class="device wide"><img src="shot-record-landscape.jpg" alt="Booked's Record screen held sideways, the way a self-tape is filmed: the scene over the camera, the record button" /></div>
   </div>
 </section>
@@ -160,12 +197,14 @@
 
   <section id="faq">
     <h2>FAQ</h2>
-    <details><summary>How do I self-tape without a reader?</summary><p>Use a reader app. Booked reads the other characters in a natural voice, waits while you speak, and comes in on your last word, so you can record the take alone. Casting hears a real back-and-forth, not you acting against a recording of your own voice.</p></details>
+    <details><summary>How do I self-tape without a reader?</summary><p>Use a self-tape reader app. Booked reads the other characters in a natural voice, waits while you speak, and comes in on your last word, so you can record the take alone. Casting hears a real back-and-forth, not you acting against a recording of your own voice.</p></details>
+    <details><summary>Is there an app to help me memorize lines?</summary><p>Yes. Booked runs the scene with you as many times as you like. The reader plays the other characters, so you memorize your lines on their cues, the way you'll play them in the room. When you blank, call &ldquo;line&rdquo; and it feeds you the next few words.</p></details>
     <details><summary>How can I learn lines faster?</summary><p>Run the scene out loud, with a reader, as many times as it takes. When you blank, call &ldquo;line&rdquo; and Booked feeds you the next few words instead of you stopping to look at the page.</p></details>
+    <details><summary>Can I rehearse a scene without a scene partner?</summary><p>Yes. Booked's reader plays every other character, waits for you, and picks up on your last word. Rehearse at 11 p.m. or ten minutes before you tape, as often as you need.</p></details>
     <details><summary>What do I need?</summary><p>An iPhone and the PDF of your sides. Booked reads it and works out who says what.</p></details>
     <details><summary>How do I get sides from my email into Booked?</summary><p>Open the email, tap the PDF, tap Share, pick Booked. The first time, Booked is under More: tap More, then Edit, then the + beside Booked, then the checkmark to save. The <a href="support.html#email">support page</a> walks through it with pictures.</p></details>
     <details><summary>Does it work with my sides as they come?</summary><p>Yes. PDFs from casting or your agent, including scans with your start and end marks. A sharp scan works; a blurry photo of a page may not.</p></details>
-    <details><summary>Is it free?</summary><p>Downloading, tracking your auditions and the demo scene are free. Building a reader for your own sides costs real money per script, so that part is paid, and priced well under hiring a reader.</p></details>
+    <details><summary>Is it free?</summary><p>Downloading, tracking your auditions and the demo scene are free. A reader for your own sides comes with a monthly subscription, priced well under hiring a reader.</p></details>
     <details><summary>Does it learn from my scripts or my tapes?</summary><p>No. Your scripts, rehearsals and self-tapes are not used to train AI, by us or by the services behind the reader. Takes never leave your phone.</p></details>
     <details><summary>Is Booked on the App Store?</summary><p>Yes, for iPhone. <a href="https://apps.apple.com/app/id6818271531">Get it on the App Store</a>.</p></details>
     <details><summary>Android version?</summary><p>After iPhone. <a href="#android">Leave your email</a> and you'll get one note when it's on Google Play.</p></details>
