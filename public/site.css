@@ -196,4 +196,5 @@ button.store.apple.elsewhere[hidden], .store[hidden] { display: none; }
 .waitlist select:focus { outline: none; border-color: var(--ink); }
 footer .elsewhere-note { margin: 0 0 8px; }
 footer .elsewhere-note a { margin: 0; text-decoration: underline; }
-button.store.apple.elsewhere { padding-left: 16px; }
+.waitlist input.other-language { display: block; width: 100%; box-sizing: border-box; margin: 0 0 8px; flex: none; }
+.waitlist input.other-language[hidden] { display: none; }

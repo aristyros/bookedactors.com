@@ -111,6 +111,7 @@
         <span><small>Download on the</small><b>App Store</b></span>
       </a>
       <button class="store apple elsewhere" type="button" id="elsewhere-button" aria-controls="waitlist" aria-expanded="false" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.8 1.3 10.3.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.2zM13.9 5c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>
         <span><small id="elsewhere-small">Not in your country yet</small><b>Join the waitlist</b></span>
       </button>
       <button class="store play" type="button" id="android-button" aria-controls="waitlist" aria-expanded="false"
@@ -231,9 +232,10 @@
   <div class="extra" id="waitlist-extra" hidden>
     <label><span>Country</span><select id="waitlist-country"></select></label>
     <label><span>I act in</span><select id="waitlist-language">
-      <option value="English">English</option><option value="French">French</option><option value="German">German</option><option value="Spanish">Spanish</option><option value="Other">Other</option>
+      <option value="English">English</option><option value="French">French</option><option value="German">German</option><option value="Spanish">Spanish</option><option value="Italian">Italian</option><option value="Portuguese">Portuguese</option><option value="Other">Another language</option>
     </select></label>
   </div>
+  <input type="text" id="waitlist-language-other" class="other-language" placeholder="Which language?" maxlength="20" autocomplete="off" hidden />
   <form id="waitlist-form" novalidate>
     <input type="email" name="email" id="waitlist-email" placeholder="you@email.com" autocomplete="email" inputmode="email" required aria-label="Email" />
     <button type="submit" id="waitlist-button">Join</button>
@@ -288,6 +290,12 @@
     var extra = document.getElementById("waitlist-extra");
     var countrySel = document.getElementById("waitlist-country");
     var languageSel = document.getElementById("waitlist-language");
+    var otherLanguage = document.getElementById("waitlist-language-other");
+    // "Another language" opens a box to type it, so the list says which one.
+    languageSel.addEventListener("change", function () {
+      otherLanguage.hidden = languageSel.value !== "Other";
+      if (!otherLanguage.hidden) otherLanguage.focus();
+    });
     var appleButton = document.getElementById("apple-button");
     var elsewhereButton = document.getElementById("elsewhere-button");
     var openers = { android: document.getElementById("android-button"), elsewhere: elsewhereButton };
@@ -312,11 +320,11 @@
         title.textContent = detected ? "Booked in " + withThe(detected) : "Booked in your country";
         why.textContent = "One email when Booked opens in your country. Nothing else.";
         countrySel.value = detected || "";
-        extra.hidden = false;
+        extra.hidden = false; otherLanguage.hidden = languageSel.value !== "Other";
       } else {
         title.textContent = o.getAttribute("data-title");
         why.textContent = "One email when it's on " + o.getAttribute("data-store") + ". Nothing else.";
-        extra.hidden = true;
+        extra.hidden = true; otherLanguage.hidden = true;
       }
       done.textContent = "You're on the list. Break a leg.";
       form.hidden = false; done.hidden = true; err.hidden = true; button.disabled = false; why.hidden = false;
@@ -355,7 +363,12 @@
       var row = { email: email, platform: platform };
       if (platform === "elsewhere") {
         if (!countrySel.value) { countrySel.focus(); return; }
-        row = { email: email, platform: "ios", country: countrySel.value, language: languageSel.value };
+        var language = languageSel.value;
+        if (language === "Other") {
+          language = (otherLanguage.value || "").trim();
+          if (!language) { otherLanguage.focus(); return; }
+        }
+        row = { email: email, platform: "ios", country: countrySel.value, language: language };
       }
       button.disabled = true;
       fetch(URL, {
@@ -365,7 +378,7 @@
       }).then(function (r) {
         if (r.ok || r.status === 409) {
           if (row.country) done.textContent = "You're on the list. We'll email you when Booked opens in " + withThe(row.country) + ".";
-          form.hidden = true; extra.hidden = true; why.hidden = true; done.hidden = false;
+          form.hidden = true; extra.hidden = true; otherLanguage.hidden = true; why.hidden = true; done.hidden = false;
         }
         else { throw new Error(String(r.status)); }
       }).catch(function () { err.hidden = false; button.disabled = false; });
