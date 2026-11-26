@@ -198,3 +198,5 @@ footer .elsewhere-note { margin: 0 0 8px; }
 footer .elsewhere-note a { margin: 0; text-decoration: underline; }
 .waitlist input.other-language { display: block; width: 100%; box-sizing: border-box; margin: 0 0 8px; flex: none; }
 .waitlist input.other-language[hidden] { display: none; }
+.waitlist .extra { flex-wrap: wrap; }
+.waitlist .extra label.wide { flex-basis: 100%; }

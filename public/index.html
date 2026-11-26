@@ -232,10 +232,11 @@
 <dialog class="waitlist" id="waitlist" aria-labelledby="waitlist-title">
   <h3 id="waitlist-title">Booked on Android</h3>
   <div class="extra" id="waitlist-extra" hidden>
-    <label><span>Country</span><select id="waitlist-country"></select></label>
+    <label class="wide"><span>Country</span><select id="waitlist-country"></select></label>
     <label><span>I act in</span><select id="waitlist-language">
       <option value="English">English</option><option value="French">French</option><option value="German">German</option><option value="Spanish">Spanish</option><option value="Italian">Italian</option><option value="Portuguese">Portuguese</option><option value="Other">Another language</option>
     </select></label>
+    <label><span>My phone</span><select id="waitlist-phone"><option value="ios">iPhone</option><option value="android">Android</option></select></label>
   </div>
   <input type="text" id="waitlist-language-other" class="other-language" placeholder="Which language?" maxlength="20" autocomplete="off" hidden />
   <form id="waitlist-form" novalidate>
@@ -293,6 +294,8 @@
     var countrySel = document.getElementById("waitlist-country");
     var languageSel = document.getElementById("waitlist-language");
     var otherLanguage = document.getElementById("waitlist-language-other");
+    var phoneSel = document.getElementById("waitlist-phone");
+    if (/Android/i.test(navigator.userAgent || "")) phoneSel.value = "android";   // a guess; they can change it
     // "Another language" opens a box to type it, so the list says which one.
     languageSel.addEventListener("change", function () {
       otherLanguage.hidden = languageSel.value !== "Other";
@@ -370,7 +373,7 @@
           language = (otherLanguage.value || "").trim();
           if (!language) { otherLanguage.focus(); return; }
         }
-        row = { email: email, platform: "ios", country: countrySel.value, language: language };
+        row = { email: email, platform: phoneSel.value, country: countrySel.value, language: language };
       }
       button.disabled = true;
       fetch(URL, {
